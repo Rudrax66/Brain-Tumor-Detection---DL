@@ -77,8 +77,6 @@ pip install -r requirements.txt
 Bash
 python -m streamlit run app_short.py
 .
-Access the app in your browser at: http://localhost:8501.  
-+1
 
 🔬 Model Details
 
