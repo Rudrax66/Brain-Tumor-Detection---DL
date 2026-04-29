@@ -1,75 +1,123 @@
-🧠 BRAIN TUMOR DETECTION
-AI-Powered MRI Analysis · ResNet50 · PyTorch · Streamlit
 
-📌 Project Overview
-Brain Tumor Detection is an AI-based web application built using Python, PyTorch (ResNet50), and Streamlit. It analyzes brain MRI scans and predicts whether a tumor is present or not with confidence scores, graphs, and downloadable reports.
+🧠 Brain Tumor Detection
+This repository contains an AI-powered web application designed to analyze brain MRI scans and detect the presence of tumors using Deep Learning. Built with PyTorch (ResNet50) and Streamlit, the tool provides real-time inference, interactive data visualizations, and downloadable medical reports.  
++4
 
 ✨ Features
-•	ResNet50 pretrained model (ImageNet weights)
-•	Upload MRI scan (JPG, PNG, BMP)
-•	Confidence gauge chart (Plotly)
-•	Class probability bar chart
-•	Pixel intensity distribution graph
-•	Tumor risk meter bar
-•	Health & dietary recommendations
-•	Downloadable .txt report
-•	Contrast enhancement toggle
-•	RGB channel viewer
-•	Fast inference — model cached after first load
+
+Advanced AI Model: Utilizes a ResNet50 architecture pretrained on ImageNet weights for high-accuracy feature extraction.  
++1
+
+
+Interactive UI: A sleek, dark-themed dashboard built with Streamlit.  
+
+Comprehensive Analytics:
+
+
+Confidence Gauge: Visualizes prediction certainty via Plotly.  
+
+
+Probability Distribution: Bar charts showing "Tumor" vs. "No Tumor" likelihood.  
+
+
+Pixel Intensity Graph: Analyzes the distribution of grayscale values in the MRI.  
+
+
+Tumor Risk Meter: A quick-glance visual for risk assessment.  
+
+
+Image Processing: Includes an enhancement toggle for contrast and an RGB channel viewer.  
+
+
+Reporting: Generates a downloadable .txt report including date, image specs, and dietary recommendations.  
++1
+
+
+Performance: Fast inference speed (under 500ms) thanks to model caching.  
++1
 
 🛠️ Tech Stack
 Library	Version	Purpose
-streamlit	>=1.32.0	Web UI framework
-torch	>=2.0.0	Deep learning engine
-torchvision	>=0.15.0	ResNet50 + transforms
-Pillow	>=10.0.0	Image loading & processing
-numpy	>=1.24.0	Array operations
-plotly	>=5.18.0	Interactive charts & graphs
+Streamlit	>=1.32.0	
+Web UI framework  
 
-📁 Folder Structure
-D:\Deep Learning\
-  ├── myenv\               (virtual environment)
-  ├── app_short.py         (main Streamlit app)
-  └── requirements.txt     (dependencies)
+PyTorch	>=2.0.0	
+Deep learning engine  
+
+Torchvision	>=0.15.0	
+ResNet50 model & transforms  
+
+Pillow	>=10.0.0	
+Image processing  
+
+Plotly	>=5.18.0	
+Interactive charts  
 
 🚀 Installation & Setup
-Step 1 — Open CMD
+1. Clone the Repository and Navigate to the Directory
+Bash
 cd D:\Deep Learning
-Step 2 — Create Virtual Environment
-python -m venv myenv
-Step 3 — Activate Environment
-myenv\Scripts\activate
-Step 4 — Install Libraries
-pip install streamlit torch torchvision Pillow numpy plotly
-Step 5 — Run the App
-python -m streamlit run app_short.py
-Then open your browser at: http://localhost:8501
 
-📖 How to Use
-•	Open the app in browser at http://localhost:8501
-•	Upload a brain MRI scan (JPG / PNG / BMP)
-•	Optionally adjust confidence threshold in the sidebar
-•	Click the ANALYZE SCAN button
-•	View result, charts, risk meter, and health tips
-•	Click Download Report to save the analysis as .txt
+(Note: Adjust path as necessary for your local environment).  
+
+2. Create and Activate a Virtual Environment
+Bash
+python -m venv myenv
+myenv\Scripts\activate
+.  
++1
+
+3. Install Dependencies
+Bash
+pip install -r requirements.txt
+.  
++1
+
+4. Run the Application
+Bash
+python -m streamlit run app_short.py
+.
+Access the app in your browser at: http://localhost:8501.  
++1
 
 🔬 Model Details
-Property	Value
-Architecture	ResNet50
-Pretrained Weights	ImageNet (IMAGENET1K_V1)
-Input Size	224 x 224 px
-Classes	2 (No Tumor / Tumor Detected)
-Framework	PyTorch + torchvision
-Inference Speed	< 500ms (after first load)
 
-⚠️ Common Errors & Fixes
-Error	Fix
-streamlit not recognized	Use: python -m streamlit run app_short.py
-No module named torch	Run: pip install torch torchvision
-Port 8501 in use	Use: --server.port 8502
-Slow first load	Normal — model downloads ~100MB once only
+Architecture: ResNet50.  
 
+
+Input Size: 224×224 pixels.  
+
+
+Classes: 2 (No Tumor / Tumor Detected).  
+
+
+Weights: IMAGENET1K_V1.  
+
+📖 How to Use
+
+Upload: Select a brain MRI scan in JPG, PNG, or BMP format.  
+
+
+Adjust: (Optional) Use the sidebar to set the confidence threshold or enhance contrast.  
+
+
+Analyze: Click the ANALYZE SCAN button.  
+
+
+Review: Examine the risk meter, probability charts, and health tips.  
+
+
+Export: Download the full analysis as a .txt report.  
 
 📋 Disclaimer
-This tool is built for EDUCATIONAL and RESEARCH purposes only.
-It is NOT a substitute for professional medical diagnosis. Always consult a qualified radiologist or neurologist for any medical concerns.
+
+This tool is built for EDUCATIONAL and RESEARCH purposes only. It is NOT a substitute for professional medical diagnosis. Always consult a qualified radiologist or neurologist for any medical concerns.  
++1
+
+📁 Project Structure
+Plaintext
+D:\Deep Learning\
+├── myenv\               (virtual environment)
+├── app_short.py         (main Streamlit app)
+└── requirements.txt     (dependencies)
+.  
